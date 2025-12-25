@@ -62,7 +62,7 @@ PanelWindow {
            
            Text {
              id: volvalue
-             text: "VOL :" + Volume.value + "%"
+             text: "VOL:" + Volume.value + "%"
              color: "#ffffff"
              font.family: myfont
              font.pixelSize: 15

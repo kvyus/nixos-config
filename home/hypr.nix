@@ -45,7 +45,7 @@
         "$mainMod,n,exec, firefox"
         "$mainMod,w,exec, steam"
         "$mainMod,d,exec, discord"
-        "$mainMod,a,exec, telegram-desktop"
+        "$mainMod,a,exec, Telegram"
         "$mainMod,k,exec, spotify"
         "$mainMod,F,fullscreen"
         "$mainMod,o,exec, hyprshot hyprshot -m output -m DP-1" 

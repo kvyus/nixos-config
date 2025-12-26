@@ -2,6 +2,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Hyprland
 import "../services/"
+import "./modules/"
 
 PanelWindow {
     id:panel
@@ -61,13 +62,21 @@ PanelWindow {
            spacing:15
            
            Text {
-             id: volvalue
-             text: "VOL:" + Volume.value + "%"
+             id: wi_fi
+             text: Wifi.ssid
              color: "#ffffff"
              font.family: myfont
              font.pixelSize: 15
            }
 
+           Text {
+             id: volvalue
+             text: "  " + Volume.value + "%"
+             color: "#ffffff"
+             font.family: myfont
+             font.pixelSize: 15
+           }
+           
            Text {
              id: time
              text: Qt.formatDateTime(clock.date, "hh:mm:ss")

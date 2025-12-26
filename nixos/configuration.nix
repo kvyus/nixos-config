@@ -73,6 +73,7 @@
     wl-clipboard
     rustc
     cargo
+    wirelesstools
 
     # Vulkan / графика
     mangohud

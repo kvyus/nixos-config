@@ -42,6 +42,7 @@
          
          sizes = {
             terminal = 13;
+            desktop = 13;
             applications = 13;
          };
       };
@@ -50,5 +51,6 @@
          package = pkgs.capitaine-cursors-themed;
          name = "Capitaine Cursors (Gruvbox)";
       };
+
    };
 }

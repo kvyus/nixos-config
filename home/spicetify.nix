@@ -5,8 +5,6 @@ in
 {
    programs.spicetify = {
       enable = true;
-#      theme = spicePkgs.themes.text;
-#      colorScheme = "Gruvbox";
       enabledExtensions = with spicePkgs.extensions; [
          shuffle
          hidePodcasts

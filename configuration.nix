@@ -33,9 +33,10 @@
       LC_TIME = "uk_UA.UTF-8";
    };
 
-   services.displayManager.sddm.enable = true;
-   services.desktopManager.plasma6.enable = true;
-
+   services.displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+   };
    services.flatpak = {
       enable = true;
       packages = [
@@ -78,8 +79,6 @@
 
    programs.fish.enable = true;
 
-   programs.firefox.enable = true;
-
    programs.steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -118,6 +117,6 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
    };
-
-   system.stateVersion = "25.11"; 
+   
+   system.stateVersion = "26.05";
 }

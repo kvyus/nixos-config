@@ -2,13 +2,14 @@
 {
    wayland.windowManager.hyprland = {
       enable = true;
+      systemd.enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland; 
       settings = {
          exec-once = [
             "qs -c def &"
             "awww-daemon &"
-            "awww img ${./wallpapers/wallhaven-qr327r.png} &"
+            "awww img ${./wallpapers/wallhaven-og3wv9.png} &"
          ];
 
          "$mainMod" = "SUPER";
@@ -28,6 +29,9 @@
          
          decoration = {
             rounding = 6;
+            blur = {
+               enabled = false;
+            };
          };
 
          animations = {
@@ -49,7 +53,7 @@
             kb_options = "grp:caps_toggle";
          };
          bind = [
-            "$mainMod, k, exec, helium"
+            "$mainMod, k, exec, librewolf"
             "$mainMod, w, exec, steam"
             "$mainMod, r, exec, spotify"
             "$mainMod, a, exec, AyuGram"

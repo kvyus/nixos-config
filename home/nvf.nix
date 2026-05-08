@@ -42,9 +42,9 @@
             ];
             opts.clipboard = "unnamedplus";
             opts.shiftwidth = 3;
+
             theme = {
                enable = true;
-            #   name = "gruvbox";
                style = "dark";
             };
 
@@ -104,6 +104,8 @@
                };
             };
             telescope.enable = true;
+            dashboard.startify.enable = true;
+            git.enable = true;
             autocomplete.nvim-cmp.enable = true;
             autopairs.nvim-autopairs.enable = true;
             visuals.nvim-web-devicons.enable = true;

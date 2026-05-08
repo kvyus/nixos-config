@@ -12,6 +12,7 @@
       ./fuzzel.nix 
       ./git.nix
       ../stylix.nix
+      ./librewolf.nix
    ];
    home.username = "cherv";
    home.homeDirectory = "/home/cherv";
@@ -55,16 +56,6 @@
          };
       };
    };
-
-   #home.pointerCursor = {
-   #   gtk.enable = true;
-   #   package = pkgs.capitaine-cursors-themed;
-   #   name = "Capitaine Cursors (Gruvbox)";
-   #   hyprcursor = {
-   #      enable = true;
-   #   };
-   #   size = 24;
-   #};
 
    home.sessionVariables = {
       EDITOR = "nvim";

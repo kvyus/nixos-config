@@ -8,7 +8,7 @@ Rectangle {
    implicitWidth: row.width + 10
    implicitHeight: 30
    radius: 7
-   color: "#3c3836" 
+   color: "#262626" 
    Row {
       id: row
       anchors.centerIn: parent
@@ -19,14 +19,14 @@ Rectangle {
             height: 20
             width: 20
             radius: 7
-            color: modelData.active ? "#fb4934" : "transparent"
+            color: modelData.active ? "#b21109" : "transparent"
             Text {
                text: modelData.id
                x: 5.25
                y: 0
                font.pixelSize: 15
                font.family: myfont
-               color: modelData.active ? "#282828" : textcolor
+               color: textcolor
             }
          }
       }

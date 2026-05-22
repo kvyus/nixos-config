@@ -7,7 +7,7 @@ PanelWindow {
    id: bar
 
    property string myfont: "JetBrainsMono Nerd Font"
-   property string textcolor: "#fbf1c7"
+   property string textcolor: "#f5f5f5"
 
    anchors {
       top: true
@@ -17,8 +17,7 @@ PanelWindow {
 
    implicitHeight: 40
 
-   color: "#282828"
-
+   color: "#111111"
    
    SystemClock {
       id: clock

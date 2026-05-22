@@ -8,11 +8,11 @@
       ./yazi.nix
       ./spicetify.nix
       ./alacritty.nix
-      ./helium.nix
       ./fuzzel.nix 
       ./git.nix
       ../stylix.nix
-      ./librewolf.nix
+      ./firefox.nix
+      ./mango.nix
    ];
    home.username = "cherv";
    home.homeDirectory = "/home/cherv";
@@ -35,6 +35,8 @@
       imv
       nemo
       nerd-fonts.geist-mono
+      vlc
+      lxappearance
    ];
 
    gtk = {
@@ -83,4 +85,5 @@
    };
 
    programs.home-manager.enable = true;
-}
+ 
+} 

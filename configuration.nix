@@ -16,6 +16,7 @@
    networking.hostName = "nixos"; 
 
    networking.networkmanager.enable = true;
+   networking.networkmanager.wifi.powersave = false;
 
    time.timeZone = "Europe/Kyiv";
 
@@ -33,10 +34,6 @@
       LC_TIME = "uk_UA.UTF-8";
    };
 
-   services.displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-   };
    services.flatpak = {
       enable = true;
       packages = [
@@ -57,10 +54,12 @@
 
    xdg.portal = {
       enable = true;
+      wlr.enable = true;
       extraPortals = with pkgs; [
          xdg-desktop-portal-hyprland
          xdg-desktop-portal-gtk
       ];
+      config.common.default = "*";
    };
 
    users.users.cherv = {
@@ -86,8 +85,6 @@
    };
 
    programs.gamemode.enable = true;
-
-   programs.hyprland.enable = true;
 
    nixpkgs.config.allowUnfree = true;
 

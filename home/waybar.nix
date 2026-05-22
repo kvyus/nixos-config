@@ -9,7 +9,7 @@
             spacing = 6;
 
             modules-left = [
-               "hyprland/workspaces"
+               "ext/workspaces"
                "pulseaudio"
             ];
 
@@ -35,7 +35,13 @@
             "memory" = {
                format = "{}%  ";
             };
-
+            "ext/workspaces" = {
+               format = "{icon}";
+               ignore-hidden = true;
+               on-click = "activate";
+               on-click-right = "deactivate";
+               sort-by-id = true;
+            };
             "network" = {
                format-wifi = "{essid} {icon}";
                format-icons = [

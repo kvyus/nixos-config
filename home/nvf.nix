@@ -53,7 +53,7 @@
                zig.enable = true;
                python.enable = true;
                markdown.enable = true;
-               ts.enable = true;
+               typescript.enable = true;
                nix.enable = true;
                lua.enable = true;
                css.enable = true;

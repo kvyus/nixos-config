@@ -13,6 +13,10 @@
       spicetify-nix.url = "github:Gerg-L/spicetify-nix";
       helium.url = "gitlab:ntgn/helium-flake";
       stylix.url = "github:danth/stylix";
+      mangowm = {
+         url = "github:mangowm/mango";
+         inputs.nixpkgs.follows = "nixpkgs";
+      };
    };
 
    outputs = { nixpkgs, home-manager, ... } @inputs: {
@@ -33,6 +37,7 @@
             inputs.spicetify-nix.homeManagerModules.default
             inputs.helium.homeModules.helium
             inputs.stylix.homeModules.stylix
+            inputs.mangowm.hmModules.mango
             ./home/home.nix
          ];
       };

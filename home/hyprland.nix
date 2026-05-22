@@ -2,14 +2,13 @@
 {
    wayland.windowManager.hyprland = {
       enable = true;
+      configType = "hyprlang";
       systemd.enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland; 
       settings = {
          exec-once = [
-            "qs -c def &"
             "awww-daemon &"
-            "awww img ${./wallpapers/wallhaven-og3wv9.png} &"
          ];
 
          "$mainMod" = "SUPER";
@@ -28,22 +27,23 @@
          };
          
          decoration = {
-            rounding = 6;
+            rounding = 0;
             blur = {
                enabled = false;
             };
          };
 
          animations = {
+            enabled = true;
             bezier = [ "myBezier, 0.05, 0.9, 0.1, 1.05" ];
             animation = [
-               "windows, 1, 4, myBezier"
-               "windowsOut, 1, 4, default, slide"
-               "windowsIn, 1, 4, default, slide"
-               "border, 1, 4, default"
-               "borderangle, 4, 8, default"
-               "fade, 1, 4, default"
-               "workspaces, 1, 4, default, slidevert"
+               "windows, 1, 2, myBezier"
+               "windowsOut, 1, 2, default, slide"
+               "windowsIn, 1, 2, default, slide"
+               "border, 1, 2, default"
+               "borderangle, 2, 8, default"
+               "fade, 1, 2, default"
+               "workspaces, 1, 2, default, slidevert"
             ];
          };
 
@@ -53,7 +53,7 @@
             kb_options = "grp:caps_toggle";
          };
          bind = [
-            "$mainMod, k, exec, librewolf"
+            "$mainMod, k, exec, firefox"
             "$mainMod, w, exec, steam"
             "$mainMod, r, exec, spotify"
             "$mainMod, a, exec, AyuGram"
@@ -119,9 +119,9 @@
       };
    };
    services.hypridle = {
-      enable = true;
+      enable = false;
       settings = {
-         lisetener = [
+         listener = [
             {
                timeout = 300;
                on-timeout = "hyprctl dispatch dpms off";

@@ -118,6 +118,11 @@
          ];
       };
    };
+
+   programs.hyprshot = {
+      enable = true;
+      saveLocation = "$HOME/Pictures/Screenshots";
+   };
    services.hypridle = {
       enable = false;
       settings = {

@@ -18,9 +18,9 @@
          ];
 
          general = {
-            gaps_in = 6;
-            gaps_out = 17;
-            border_size = 3;
+            gaps_in = 0;
+            gaps_out = 0;
+            border_size = 2;
 #            "col.inactive_border" = "rgb(928374)";
 #            "col.active_border" = "rgb(ebdbb2)";
             layout = "master";

@@ -62,11 +62,13 @@
       config.common.default = "*";
    };
 
+   programs.zsh.enable = true;
+
    users.users.cherv = {
       isNormalUser = true;
       description = "cherv";
       extraGroups = [ "networkmanager" "wheel" ];
-      shell = pkgs.fish;
+      shell = pkgs.zsh;
    };
 
    nix.settings.experimental-features = [ "nix-command" "flakes" ]; 

@@ -15,7 +15,7 @@ PanelWindow {
       right: true
    }
 
-   implicitHeight: 40
+   implicitHeight: 30
 
    color: "#111111"
    
@@ -28,7 +28,7 @@ PanelWindow {
       id: leftpart
       anchors.left: parent.left   
       anchors.verticalCenter: parent.verticalCenter
-      anchors.leftMargin: 7
+      anchors.leftMargin: 0
       spacing: 15
 
       Loader {
@@ -54,7 +54,7 @@ PanelWindow {
       id: rightpart
       anchors.right: parent.right
       anchors.verticalCenter: parent.verticalCenter
-      anchors.rightMargin: 7
+      anchors.rightMargin: 5.25
       spacing: 15
 
       Loader {

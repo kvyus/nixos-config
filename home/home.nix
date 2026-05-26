@@ -13,6 +13,7 @@
       ../stylix.nix
       ./firefox.nix
       ./mango.nix
+      ./zsh.nix
    ];
    home.username = "cherv";
    home.homeDirectory = "/home/cherv";
@@ -30,7 +31,6 @@
       btop
       pavucontrol
       nwg-look
-      hyprshot
       vscodium
       imv
       nemo
@@ -77,6 +77,8 @@
    programs.emacs = {
       enable = true;
    };
+
+   services.mako.enable = true;
 
    programs.direnv = {
       enable = true;

@@ -9,7 +9,7 @@
                x = 5;
                y = 5;
             }; 
-            opacity = lib.mkForce 0.8;
+            opacity = lib.mkForce 1;
          };
       };
    };

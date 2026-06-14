@@ -3,17 +3,17 @@
    imports = [
       ./nvf.nix
       ./hyprland.nix
-      ./fish.nix
       ./waybar.nix
-      ./yazi.nix
       ./spicetify.nix
       ./alacritty.nix
       ./fuzzel.nix 
+      ./helium.nix
       ./git.nix
       ../stylix.nix
       ./firefox.nix
       ./mango.nix
       ./zsh.nix
+      ./tmux.nix
    ];
    home.username = "cherv";
    home.homeDirectory = "/home/cherv";
@@ -37,6 +37,8 @@
       nerd-fonts.geist-mono
       vlc
       lxappearance
+      pokemon-colorscripts
+      unzip
    ];
 
    gtk = {
@@ -78,7 +80,10 @@
       enable = true;
    };
 
-   services.mako.enable = true;
+#   services.mako.enable = true;
+   services.mako.settings = {
+      default-timeout = 5; 
+   };
 
    programs.direnv = {
       enable = true;

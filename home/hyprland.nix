@@ -9,6 +9,7 @@
       settings = {
          exec-once = [
             "awww-daemon &"
+            "waybar &"
          ];
 
          "$mainMod" = "SUPER";
@@ -18,8 +19,8 @@
          ];
 
          general = {
-            gaps_in = 0;
-            gaps_out = 0;
+            gaps_in = 2;
+            gaps_out = 4;
             border_size = 2;
 #            "col.inactive_border" = "rgb(928374)";
 #            "col.active_border" = "rgb(ebdbb2)";
@@ -34,7 +35,7 @@
          };
 
          animations = {
-            enabled = true;
+            enabled = false;
             bezier = [ "myBezier, 0.05, 0.9, 0.1, 1.05" ];
             animation = [
                "windows, 1, 2, myBezier"

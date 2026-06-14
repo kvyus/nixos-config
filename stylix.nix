@@ -13,7 +13,7 @@
          base06 = "f0f0f0";
          base07 = "ffffff"; 
          base08 = "ef6c6d";
-         base09 = "d9d9d9";
+         base09 = "b21109";
          base0A = "bfbfbf";
          base0B = "e6e6e6";
          base0C = "cccccc";

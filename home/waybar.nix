@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+   stylix.targets.waybar.enable = false;
    programs.waybar = {
       enable = true;
 
@@ -9,7 +10,7 @@
             spacing = 6;
 
             modules-left = [
-               "ext/workspaces"
+               "hyprland/workspaces"
                "pulseaudio"
             ];
 
@@ -34,13 +35,6 @@
 
             "memory" = {
                format = "{}%  ";
-            };
-            "ext/workspaces" = {
-               format = "{icon}";
-               ignore-hidden = true;
-               on-click = "activate";
-               on-click-right = "deactivate";
-               sort-by-id = true;
             };
             "network" = {
                format-wifi = "{essid} {icon}";
@@ -70,7 +64,7 @@
          }
 
          window#waybar {
-            background-color: #282828;
+            background-color: #111111;
             transition-property: background-color;
             transition-duration: .5s;
          }
@@ -90,33 +84,27 @@
          }
 
          button {
-            box-shadow: inset 0 -3px transparent;
             border: none;
             border-radius: 0;
          }
 
          button:hover {
             background: inherit;
-            box-shadow: inset 0 -3px #fbf1c7;
          }
 
          #workspaces button {
-            padding: 0 5px;
             background-color: transparent;
-            color: #fbf1c7
+            color: #f5f5f5;
+            padding: 0 4px;
          }
 
          #workspaces button.focused {
-            background-color: #3c3836;
+            background-color: #b21109;
          }
 
          #workspaces button.active {
-            background-color: #fb4934;
-            color: #3c3836;
-         }
-
-         #workspaces button.urgent {
-            background-color: #cc241d;
+            background-color: #b21109;
+            color: #f5f5f5;
          }
 
          #clock,
@@ -139,9 +127,8 @@
          }
          
          #workspaces {
-            margin: 0 4px;
-            background-color: #3c3836;
-            color: #d8dee9;
+            background-color: transparent;
+            color: #f5f5f5;
          }
 
          .modules-left > widget:first-child > #workspaces {
@@ -154,7 +141,7 @@
 
          #clock {
             background-color: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
          }
 
          @keyframes blink {
@@ -170,40 +157,40 @@
 
          #cpu {
             background-color: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
          }
 
          #memory {
             background-color: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
          }
 
          #network {
             background-color: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
          }
 
          #network.disconnected {
-            background-color: #fb4934;
+            background-color: #c75a5a;
          }
 
          #pulseaudio {
             background-color: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
          }
 
          #pulseaudio.muted {
-            background-color: #fb4934;
-            color: #282828;
+            background-color: #b21109;
+            color: #111111;
          }
 
          #wireplumber {
             background-color: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
          }
 
          #wireplumber.muted {
-            background-color: #fb4934;
+            background-color: #b21109;
          }
 
          #tray {
@@ -221,7 +208,7 @@
 
          #language {
             background: transparent;
-            color: #fbf1c7;
+            color: #f5f5f5;
             padding: 0 5px;
             margin: 0 5px;
             min-width: 16px;

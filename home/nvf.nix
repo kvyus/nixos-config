@@ -43,6 +43,10 @@
             opts.clipboard = "unnamedplus";
             opts.shiftwidth = 3;
 
+            treesitter = {
+               enable = true;
+            };
+
             theme = {
                enable = true;
                style = "dark";

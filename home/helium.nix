@@ -3,10 +3,7 @@
 {
    programs.helium = {
       enable = true;
-      extensions = with config.programs.helium.presets; [
-         vimium
-         uBlockOrigin
-         darkReader
+      extensions = [
       ];
 
       extraFlags = [

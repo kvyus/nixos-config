@@ -23,7 +23,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
          specialArgs = { inherit inputs; };
          modules = [
-            ./configuration.nix
+            ./nixos/configuration.nix
             inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.helium.nixosModules.helium
             inputs.stylix.nixosModules.stylix

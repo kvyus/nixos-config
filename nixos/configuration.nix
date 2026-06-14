@@ -4,7 +4,8 @@
 {
    imports = [ 
       ./hardware-configuration.nix
-      ./stylix.nix
+      ../stylix.nix
+      ./services.nix
    ];
 
    boot.loader.grub.enable = true;
@@ -34,32 +35,32 @@
       LC_TIME = "uk_UA.UTF-8";
    };
 
-   services.flatpak = {
-      enable = true;
-      packages = [
-         "org.vinegarhq.Sober"
-      ];
-      update.onActivation = true;
-   };
-
-   services.printing.enable = true;
-
-   services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      wireplumber.enable = true;
-   };
-
    xdg.portal = {
       enable = true;
-      wlr.enable = true;
+      wlr = {
+         enable = true;
+         settings = {
+            screencast = {
+               output_name = "HDMI-A-1";
+               max_fps = 100;
+               chooser_type = "simple";
+               chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
+            };
+         };
+      };
       extraPortals = with pkgs; [
          xdg-desktop-portal-hyprland
          xdg-desktop-portal-gtk
       ];
-      config.common.default = "*";
+      config = {
+         mango = {
+            default = [
+               "gtk"
+            ];
+            "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
+            "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
+         };
+      };
    };
 
    programs.zsh.enable = true;
@@ -101,6 +102,7 @@
       fastfetch
       wl-clipboard
       killall
+      slurp
    ];
 
    fonts.packages = with pkgs; [
